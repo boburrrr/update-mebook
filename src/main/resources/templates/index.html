@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome to Mebook</h2>
+    <div class="buttons">
+        <a th:href="@{/auth/sign-in}" class="btn btn-primary">Sign In</a>
+        <a th:href="@{/auth/sign-up}" class="btn btn-secondary">Sign Up</a>
+    </div>
+</div>
+</body>
+</html>

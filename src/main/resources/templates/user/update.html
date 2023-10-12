@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Update</title>
+    <link rel="stylesheet" type="text/css" href="/css/user/update.css">
+</head>
+<body>
+<h1>User Update</h1>
+<form th:action="@{/user/update/{userId}(userId=${user.id})}" method="post">
+<!--    <input type="checkbox" name="userId" th:value="${user.id}">-->
+    <input type="text" th:value="${user.name}" name="name" placeholder="Name">
+    <br>
+    <input type="text" th:value="${user.username}" name="username" placeholder="Username" required>
+    <br>
+    <input type="password" name="password" placeholder="Password" required>
+    <br>
+    
+    <input type="email" th:value="${user.email}" name="email">
+    <button type="submit">Update</button>
+</form>
+<form >
+
+</form>
+</body>
+</html>

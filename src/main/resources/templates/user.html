@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/user.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome, <span th:text="${user.name}"/></h1>
+        <a class="button" th:href="@{/user/update/{userId}(userId=${user.id})}">My</a>
+        <a class="button" th:href="@{/contacts}">Contact</a>
+        <a class="button" th:href="@{/groups}">Group</a>
+        <a class="button" th:href="@{/channels}">Channel</a>
+        <a class="button" th:href="@{/search}">Search</a>
+        <div class="content">
+            <div class="buttons">
+                <a class="logout-button" th:href="@{/}">Log Out</a>
+                <button class="back-button" onclick="goBack()">Back</button>
+            </div>
+            <!-- Your content goes here -->
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</div>
+</body>
+</html>

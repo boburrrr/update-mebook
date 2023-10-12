@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Not Found</title>
+    <link rel="stylesheet" type="text/css" href="/css/user/userNotFound.css">
+</head>
+<body>
+<h1>Error</h1>
+<p th:text="${errorMessage}"></p>
+<button class="back-button" onclick="back()">Back</button>
+<script>
+    function back() {
+         // O'zgartirilishi kerak bo'lgan sahifa nomi
+        window.location.href = "/";
+
+
+        // var malumot = "Malumotlar"; // Jo'natilishi kerak bo'lgan malumot
+
+    }
+</script>
+</body>
+</html>
